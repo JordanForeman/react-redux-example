@@ -1,27 +1,15 @@
 import React from 'react';
-import { Hello } from './components/Hello';
-import {Input} from './components/Input';
+import { FirstNameInput } from './connectors/FirstNameInput.connector';
+import { LastNameInput } from './connectors/LastNameInput.connector';
+import { Hello } from './connectors/Hello.connector';
 
 export class Application extends React.Component {
-    constructor() {
-        super();
-        this.state = { name: 'World' };
-    }
-
-    updateName(event) {
-        this.setState({
-            name: event.target.value
-        });
-    }
-
     render() {
         return (
             <div>
-                <Input
-                    onChange={::this.updateName}
-                    value={this.state.name}
-                />
-                <Hello user={this.state.name} />
+                <FirstNameInput />
+                <LastNameInput />
+                <Hello/>
             </div>
         );
     }
