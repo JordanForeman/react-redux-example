@@ -11,6 +11,11 @@ function init() {
         </Provider>,
         document.getElementById('root') // eslint-disable-line no-undef
     );
+
+    store.dispatch({
+        type: 'Update First Name',
+        firstName: 'Not Jordan'
+    });
 }
 
 init();
