@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { store } from './store';
 import { Application } from './application';
+import {updateFirstName} from './state/actions';
 
 function init() {
     ReactDOM.render(
@@ -12,10 +13,7 @@ function init() {
         document.getElementById('root') // eslint-disable-line no-undef
     );
 
-    store.dispatch({
-        type: 'Update First Name',
-        firstName: 'Not Jordan'
-    });
+    store.dispatch(updateFirstName('Not Jordan'));
 }
 
 init();
