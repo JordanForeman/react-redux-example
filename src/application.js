@@ -1,7 +1,7 @@
 import React from 'react';
-import { FirstNameInput } from './connectors/FirstNameInput.connector';
-import { LastNameInput } from './connectors/LastNameInput.connector';
-import { Hello } from './connectors/Hello.connector';
+import { FirstNameInput } from './components/FirstNameInput';
+import { LastNameInput } from './components/LastNameInput';
+import { Hello } from './components/Hello';
 
 export class Application extends React.Component {
     render() {
